@@ -4,15 +4,21 @@ import noteContext from "../../Context/Notes/NoteContext";
 
 function Addnote() {
   const context = useContext(noteContext);
+  // getting addnote from the NoteState
   const { addNote } = context;
-  const [note, setNote] = useState({ title: "", description: "", tag: "" });
+  const [note, setNote] = useState({
+    title: "",
+    description: "",
+    tag: "",
+  });
+
   const handleClick = (e) => {
     e.preventDefault();
     addNote(note.title, note.description, note.tag);
+    setNote({ title: "", description: "", tag: "" });
   };
   const onChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value });
-    // console.log(e);
   };
   return (
     <>
@@ -21,43 +27,51 @@ function Addnote() {
         {/* Form  */}
         <form className="text-start container form my-4">
           <div className="mb-3">
-            <label htmlFor="title" className="form-label">
+            <label htmlFor="title" className="form-label title">
               Title
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-control text-capitalize	"
               id="title"
               name="title"
               aria-describedby="emailHelp"
+              value={note.title}
               onChange={onChange}
+              minLength={5}
+              required
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="description" className="form-label">
+            <label htmlFor="description" className="form-label desc">
               Description
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-control text-capitalize"
               id="description"
               name="description"
+              value={note.description}
               onChange={onChange}
+              minLength={5}
+              required
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="tag" className="form-label">
+            <label htmlFor="tag" className="form-label tag">
               Tag
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-control text-capitalize"
               id="tag"
               name="tag"
+              value={note.tag}
               onChange={onChange}
             />
           </div>
           <button
+            disabled={note.title.length < 5 || note.description < 5}
             type="submit"
             className="btn btn-primary"
             onClick={handleClick}

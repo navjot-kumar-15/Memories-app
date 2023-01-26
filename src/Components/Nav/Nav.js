@@ -4,9 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 function Nav() {
   // using a location hook
   const location = useLocation();
-  useEffect(() => {
-    // console.log(location.pathname);
-  }, [location]);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -38,33 +36,14 @@ function Nav() {
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  // adding active function
-                  className={`nav-link ${
-                    location.pathname === "/about" ? "active" : ""
-                  }`}
-                  to="/about"
-                >
-                  About
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/contact">
-                  Contact
-                </Link>
-              </li>
             </ul>
             <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
+              <Link className="btn btn-primary mx-3" to="/login" role="button">
+                Login
+              </Link>
+              <Link className="btn btn-primary mx-3" to="/signup" role="button">
+                SignUp
+              </Link>
             </form>
           </div>
         </div>

@@ -1,15 +1,21 @@
+
 .card{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     width: 20vw;
-    margin-left: 1rem ;
     text-align: start;
+    margin: 0rem 2rem 0rem 2rem;
 }
 .btn{
     margin-right: 1rem;
 }
-/* .icon{
-    margin-right: 2rem;
-} */
 i{
     cursor: pointer;
+    margin: 1rem;
+}
+i:hover{
+    color:#766594
+}
+h5{
+    width: 13vw;
+    font-size: large;
 }
