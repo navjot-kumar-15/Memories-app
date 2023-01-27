@@ -1,22 +1,32 @@
 .main-sign{
-    background-image: url("./../../Image/Sign.jpg");
+    /* background-image: url("./../../Image/Sign.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 104.8vw;
     height: 92.8vh;
     position: relative;
     right: 15%;
-    background-blend-mode: color-burn;
+    background-blend-mode: color-burn; */
+    position: absolute;
+    background-image: url("./../../Image/Sign.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 107.3vw;
+    margin-left: -8rem;
+    height: 93vh;
+    z-index: -1;
+    left: 0%;
 }
 .signCont{
     text-align: start;
     /* border: 2px solid red; */
     border-radius: 1.5rem;
     position: absolute;
-    top: 15%;
+    top: 20%;
     right: 3%;
     width: 30vw;
-    height: 53vh;
+    height: 57vh;
     padding: 1.5rem;
     font-size: 1.3rem;
     font-weight:500;

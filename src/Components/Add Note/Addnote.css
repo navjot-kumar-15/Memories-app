@@ -1,9 +1,48 @@
 
+@media screen and (max-device-width: 540px)
+and (orientation: landscape) {
+
+    .form{
+        /* border: 1px solid red ; */
+        /* display: inline-block; */
+        width: 20vw;
+        padding: 2rem;
+        border-radius: 2rem;
+        background-color: #FEF7FF;
+        font-size: .9rem;
+    }
+    input{
+        height: 3vh;
+    }
+    .btn{
+        height: 3vh;
+        font-size: .8rem;
+        width: 27vw;
+        padding: 0;
+
+    }
+    .main{
+
+        display: block;
+        width: 60vw;
+        /* padding: 2rem    ; */
+    }
+    
+    
+}
+ 
+
+
+@media screen and (max-device-width: 2100px)
+and (orientation: landscape) {
+
+
 .form{
     /* border: 1px solid red ; */
     width: 40vw;
     padding: 2rem;
     border-radius: 2rem;
+    background-color: #FEF7FF;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .main{
@@ -11,3 +50,4 @@
     width: 41vw;
 }
 
+}

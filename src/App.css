@@ -6,6 +6,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background-color: #D9E8EE;
+}
 
 .App-logo {
   height: 40vmin;
@@ -41,14 +44,5 @@
     transform: rotate(360deg);
   }
 }
-.btn{
-  -webkit-transition: all .3s ;
-}
-.btn:hover{
-  background-image: linear-gradient(to right top, #945bc3, #845ec4, #7461c3, #6363c2, #5164bf, #4b6bc4, #4472c8, #3e78cb, #4586d7, #4c95e4, #55a3ef, #5fb2fb);
-cursor: pointer;
-border: .5px solid white;
--webkit-transform: rotate(360deg) scale(1.2);
-text-size-adjust: inherit;
-overflow: hidden;
-}
+
+ 

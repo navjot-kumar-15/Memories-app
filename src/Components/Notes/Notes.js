@@ -4,6 +4,7 @@ import NotesItem from "./NotesItem";
 import "./Notes.css";
 
 function Notes(props) {
+  const { showAlert } = props;
   const context = useContext(noteContext);
   const { notes, getNote, upadateNote } = context;
 
@@ -36,6 +37,7 @@ function Notes(props) {
     refClose.current.click();
     console.log("You have clicked the update note ");
     // addNote(note.title, note.description, note.tag);
+    props.showAlert("Updated Successfully ", "success");
   };
   const onChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value });
@@ -154,7 +156,14 @@ function Notes(props) {
             {notes.length === 0 && <p>No notes here to display </p>}
           </div>
           {notes.map((note) => {
-            return <NotesItem key={note._id} update={update} note={note} />;
+            return (
+              <NotesItem
+                key={note._id}
+                update={update}
+                showAlert={showAlert}
+                note={note}
+              />
+            );
           })}
         </div>
       </div>

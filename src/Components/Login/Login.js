@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
-import loginImg from "../../Image/loginimg.jpg";
 
-export default function Login() {
+export default function Login(props) {
   let navigate = useNavigate();
-
   const [cred, setCred] = useState({ email: "", password: "" });
   const onChange = (e) => {
     setCred({ ...cred, [e.target.name]: e.target.value });
@@ -23,27 +21,29 @@ export default function Login() {
     });
     const json = await response.json();
     console.log(json);
-    if (json.success) {
-      // Save the auth token and redirect
-      localStorage.setItem("token", json.jwtAuthToken);
-      navigate("/");
-    } else {
-      alert("invalid credentials");
-    }
+    // Save the auth token and redirect
+    localStorage.setItem("token", json.jwtAuthToken);
+    navigate("/");
+    props.showAlert("Login Successfully ", "success");
   };
   return (
     <>
-      <div className="log">
+      <div className="container">
+        <div className="row">
+          <div className="col col-md-12 col-xl-12 col-sm-12">
+            <div className="log "></div>
+          </div>
+        </div>
         {/* <img className="img container-fluid" src={loginImg} alt="image" /> */}
-        <img src="" alt="" />
+        <img src="" alt="" className="img" />
         <form
           className="container d-flex flex-column justify-content-center align-items-center loginform"
           onSubmit={handleOnSubmit}
         >
-          <div className="mb-3 text-start">
+          <div className="mb-3  text-start">
             <label
               htmlFor="exampleInputEmail1"
-              className="form-label text-start fs-4"
+              className="form-label text-start fs-4 email"
             >
               Email address
             </label>
@@ -75,7 +75,7 @@ export default function Login() {
               placeholder="Enter Your Password"
             />
           </div>
-          <button type="submit" className="btn btn-primary d-flex ">
+          <button type="submit" className="btn btn-primary  ">
             Login
           </button>
         </form>

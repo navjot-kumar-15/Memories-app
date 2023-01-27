@@ -7,10 +7,11 @@ function NotesItem(props) {
   // Getting the delete api from the NoteState
   const { deleteNote } = context;
   const { note, update } = props;
+  const { showAlert } = props;
   return (
     <>
-      <div className="col-lg-4  col-md-3 col-sm-12   ">
-        <div className="card my-2  ">
+      <div className="col-lg-4 card-main col-md-6 col-sm-12 col-xl-  ">
+        <div className="card my-2 card-item  ">
           <div className="card-body  ">
             <div className="d-flex justify-content-between align-items-center">
               <h5 className="card-title title">{note.title}</h5>
@@ -21,12 +22,13 @@ function NotesItem(props) {
               <i
                 className="fa-sharp fa-solid fa-trash  icon"
                 onClick={() => {
-                  return deleteNote(note._id);
+                  deleteNote(note._id);
+                  props.showAlert("Deleted Successfully", "success");
                 }}
               ></i>
             </div>
-            <p className="card-text desc">{note.description}</p>
-            <p className="card-text tag">{note.tag}</p>
+            <p className="card-text desc text-start">{note.description}</p>
+            <p className="card-text tag text-start">{note.tag}</p>
           </div>
         </div>
       </div>

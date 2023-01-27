@@ -2,11 +2,14 @@ import Addnote from "../Add Note/Addnote";
 import "./Home.css";
 import Notes from "../Notes/Notes";
 
-function Home() {
+function Home(props) {
+  const { showAlert } = props;
   return (
     <>
-      <Addnote />
-      <Notes />
+      <div>
+        <Addnote showAlert={showAlert} />
+        <Notes showAlert={showAlert} />
+      </div>
     </>
   );
 }

@@ -1,21 +1,44 @@
 
-.card{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    width: 20vw;
-    text-align: start;
-    margin: 0rem 2rem 0rem 2rem;
+/* For Mobile Landscape View */
+
+@media screen and (max-device-width: 540px)
+and (orientation: landscape) {
+    .card{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        width: 15vw;
+        text-align: start;
+        margin: 0rem 2rem 0rem 2rem;
+        border: 1px solid red;
+    
+    }
+    .btn{
+        margin-right: 1rem;
+    }
+    i{
+        cursor: pointer;
+        margin: .5rem;
+    }
+    i:hover{
+        color:#766594
+    }
+    .card-title{
+        width: 20vw;
+        border: 1px solid red;
+        font-size: .9rem;
+    }
+    .card-item{
+        display: flex;
+        justify-content: space-between;
+        background-color: #FEF7FF;
+        margin-right: 5rem;
+    }
 }
-.btn{
-    margin-right: 1rem;
-}
-i{
-    cursor: pointer;
-    margin: 1rem;
-}
-i:hover{
-    color:#766594
-}
-h5{
-    width: 13vw;
-    font-size: large;
-}
+
+
+
+
+
+
+
+ 
+

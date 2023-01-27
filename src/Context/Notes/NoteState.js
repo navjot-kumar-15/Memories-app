@@ -27,7 +27,7 @@ const NoteState = (props) => {
     // API call
     // eslint-disable-next-line
     const response = await fetch(`${host}/api/notes/addnote`, {
-      method: "post",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
         "auth-token":

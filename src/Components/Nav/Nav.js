@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import "./Nav.css";
 
 function Nav() {
   // using a location hook
@@ -7,8 +8,8 @@ function Nav() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
-        <div className="container-fluid">
+      <nav className="navbar navbar-expand-lg bg-dark navbar-dark ">
+        <div className="container-fluid header">
           <Link className="navbar-brand" to="/">
             Scheduler
           </Link>
