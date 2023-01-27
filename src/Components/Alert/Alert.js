@@ -11,13 +11,6 @@ function Alert(props) {
   };
   return (
     <>
-      {/* {props.alert && (
-        <div
-          className={` alert alert-${props.alert.type} d-none `}
-          role="alert"
-        >
-          <strong>{props.alert.type}</strong>:{props.alert.msg}
-        </div> */}
       {props.alert && (
         <div className={`alert alert-${props.alert.type}`} role="alert">
           <strong>{cap(props.alert.type)} </strong> : {props.alert.msg}
