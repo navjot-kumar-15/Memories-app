@@ -1,42 +1,268 @@
-.main-sign{
-    /* background-image: url("./../../Image/Sign.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 104.8vw;
-    height: 92.8vh;
-    position: relative;
-    right: 15%;
-    background-blend-mode: color-burn; */
-    position: absolute;
-    background-image: url("./../../Image/Sign.jpg");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    width: 107.3vw;
-    margin-left: -8rem;
-    height: 93vh;
-    z-index: -1;
-    left: 0%;
-}
+
+    .main-sign{
+        position: absolute;
+        left: 0%;
+        /* transform: translateX(2rem); */
+        background-image: url("./../../Image/Sign.jpg");
+        background-size:cover;
+        background-position:right;
+        background-repeat: no-repeat;
+        width: 100vw; 
+         height: 93vh;
+        z-index: -1;
+       /* border: 1px solid red; */
+    }
+    .signCont{
+        text-align: start;
+        /* border: 2px solid red; */
+        border-radius: 1.5rem;
+        position: absolute;
+        top: 20%;
+        right: 3%;
+        width: 30vw;
+        height: 60vh;
+        padding: 1.5rem;
+        font-size: 1.3rem;
+        font-weight:500;
+        backdrop-filter:blur(10px);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+    .sign-h{
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+
+
+
+ @media (max-width: 375px){
+    .signCont{
+        position: absolute;
+        left: 7%;
+        top:15%;
+        width: 85vw;
+        overflow: hidden;
+    }
+    input{
+        height: 4vh;
+    }
+    ::placeholder{
+        font-size: 1rem;
+    }
+ }
+
+
+ @media (min-width:275px){
+    .main-sign{
+        height:94.5vh;
+    }
 .signCont{
-    text-align: start;
-    /* border: 2px solid red; */
-    border-radius: 1.5rem;
     position: absolute;
-    top: 20%;
-    right: 3%;
-    width: 30vw;
-    height: 57vh;
-    padding: 1.5rem;
-    font-size: 1.3rem;
-    font-weight:500;
-    backdrop-filter:blur(8px);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    left: 7%;
+    top:15%;
+    height: 60vh;
+    width: 85vw;
 }
 .sign-h{
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-top: -1rem;
 }
+lable{
+    font-size: 1rem;
+}
+ }
+
+
+ @media (min-width:375px){
+.signCont{
+    position: absolute;
+    left: 7%;
+    top:15%;
+    height: 65vh;
+    width: 85vw;
+}
+ }
+
+ @media (min-width:410px){
+    .main-sign{
+        height:94.5vh;
+    }
+.signCont{
+    position: absolute;
+    left: 7%;
+    top:15%;
+    height: 48vh;
+    width: 85vw;
+}
+ }
+ @media (min-width:535px){
+    .main-sign{
+        height:94.5vh;
+    }
+.signCont{
+    position: absolute;
+    left: 7%;
+    top:15%;
+    height: 62vh;
+    width: 85vw;
+}
+ }
+
+
+
+ @media (min-width:820px){
+    .main-sign{
+        height:94.5vh;
+    }
+.signCont{
+    position: absolute;
+    left: 25%;
+    top:25%;
+    height: 45vh;
+    width: 50vw;
+}
+.sign-h{
+    font-size: 2.5rem;
+}
+label{
+    font-size: 2rem;
+}
+input{
+    height: 4vh;
+}
+::placeholder{
+    font-size: 1.5rem;
+}
+.sign-btn{
+    width: 13vw;
+    font-size: 1.3rem;
+}
+ }
+
+
+
+ @media (min-width:765px){
+    .main-sign{
+        height:94.5vh;
+    }
+.signCont{
+    position: absolute;
+    left: 25%;
+    top:25%;
+    height: 52vh;
+    width: 50vw;
+}
+.sign-h{
+    font-size: 2.5rem;
+}
+label{
+    font-size: 2rem;
+}
+input{
+    height: 4vh;
+}
+::placeholder{
+    font-size: 1.5rem;
+}
+.sign-btn{
+    width: 13vw;
+    font-size: 1.3rem;
+}
+ }
+
+
+ @media (min-width:900px){
+    .main-sign{
+        height:97vh;
+    }
+.signCont{
+    position: absolute;
+    left: 20%;
+    top:25%;
+    height: 47vh;
+    width: 60vw;
+}
+.sign-h{
+    font-size: 3rem;
+}
+label{
+    font-size: 2.3rem;
+}
+input{
+    height: 4vh;
+}
+::placeholder{
+    font-size: 1.8rem;
+}
+.sign-btn{
+    width: 13vw;
+    font-size: 1.8rem;
+}
+ }
+
+
+ @media (min-width:1024px){
+    .main-sign{
+        height:105vh;
+        background-position:right;
+    }
+.signCont{
+    position: absolute;
+    left: 20%;
+    top:20%;
+    height: 70vh;
+    width: 55vw;
+}
+.sign-h{
+    font-size: 2rem;
+}
+label{
+    font-size: 1.5rem;
+}
+input{
+    height: 5vh;
+    width: 30vw;
+}
+::placeholder{
+    font-size: 1.2rem;
+}
+.sign-btn{
+    width: 10vw;
+    font-size: 1rem;
+}
+ }
+
+ 
+ @media (min-width:1280px){
+    .main-sign{
+        height:105vh;
+        background-position:right;
+    }
+.signCont{
+    position: absolute;
+    left: 20%;
+    top:20%;
+    height: 60vh;
+    width: 55vw;
+}
+.sign-h{
+    font-size: 2rem;
+}
+label{
+    font-size: 1.5rem;
+}
+input{
+    height: 5vh;
+    width: 30vw;
+}
+::placeholder{
+    font-size: 1.2rem;
+}
+.sign-btn{
+    width: 10vw;
+    font-size: 1rem;
+}
+ }

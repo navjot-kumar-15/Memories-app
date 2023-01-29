@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Sign.css";
+
 function Signup(props) {
   let navigate = useNavigate();
 
@@ -21,16 +22,15 @@ function Signup(props) {
       body: JSON.stringify({ name, email, password }),
     });
     const json = await response.json();
-    console.log(json);
+    // console.log(json);
     // Save the auth token and redirect
-
-    localStorage.setItem("token", json.jwtAuthToken);
-    navigate("/");
     props.showAlert("Sign up successfully", "success");
+    navigate("/login");
   };
+
   return (
     <>
-      <div className="contianer-fluid main-sign">
+      <div className="container-fluid main-sign mw-115">
         <div className="signCont">
           <img src="" alt="" className="img-sign" />
           <form onSubmit={handleSubmit}>
@@ -80,7 +80,7 @@ function Signup(props) {
                 required
               />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary sign-btn">
               Submit
             </button>
           </form>

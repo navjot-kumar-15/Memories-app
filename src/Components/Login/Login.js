@@ -4,11 +4,7 @@ import "./Login.css";
 
 export default function Login(props) {
   let navigate = useNavigate();
-  const [cred, setCred] = useState({ email: "", password: "" });
-  const onChange = (e) => {
-    setCred({ ...cred, [e.target.name]: e.target.value });
-    // console.log(e);
-  };
+  const [Credentials, setCredentials] = useState({ email: "", password: "" });
 
   const handleOnSubmit = async (e) => {
     e.preventDefault();
@@ -17,15 +13,28 @@ export default function Login(props) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email: cred.email, password: cred.password }),
+      body: JSON.stringify({
+        email: Credentials.email,
+        password: Credentials.password,
+      }),
     });
     const json = await response.json();
     console.log(json);
-    // Save the auth token and redirect
-    localStorage.setItem("token", json.jwtAuthToken);
-    navigate("/");
-    props.showAlert("Login Successfully ", "success");
+    if (json.success) {
+      // Save the auth token and redirect
+      localStorage.setItem("token", json.jwtAuthToken);
+      props.showAlert("Login Successfully ", "success");
+      navigate("/");
+    } else {
+      alert("invalid Credentials");
+    }
   };
+
+  const onChange = (e) => {
+    setCredentials({ ...Credentials, [e.target.name]: e.target.value });
+    // console.log(e);
+  };
+
   return (
     <>
       <div className="container">
@@ -34,16 +43,16 @@ export default function Login(props) {
             <div className="log "></div>
           </div>
         </div>
-        {/* <img className="img container-fluid" src={loginImg} alt="image" /> */}
         <img src="" alt="" className="img" />
         <form
           className="container d-flex flex-column justify-content-center align-items-center loginform"
           onSubmit={handleOnSubmit}
         >
+          <h3 className="login-h">Login Form</h3>
           <div className="mb-3  text-start">
             <label
               htmlFor="exampleInputEmail1"
-              className="form-label text-start fs-4 email"
+              className="form-label text-start  email"
             >
               Email address
             </label>
@@ -53,7 +62,7 @@ export default function Login(props) {
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               name="email"
-              value={cred.email}
+              value={Credentials.email}
               onChange={onChange}
               placeholder="Enter Your Email"
             />
@@ -61,7 +70,7 @@ export default function Login(props) {
           <div className="mb-3 text-start">
             <label
               htmlFor="exampleInputPassword1"
-              className="form-label text-start fs-4"
+              className="form-label text-start "
             >
               Password
             </label>
@@ -70,12 +79,12 @@ export default function Login(props) {
               className="form-control input"
               id="exampleInputPassword1"
               name="password"
-              value={cred.password}
+              value={Credentials.password}
               onChange={onChange}
               placeholder="Enter Your Password"
             />
           </div>
-          <button type="submit" className="btn btn-primary  ">
+          <button type="submit" className="btn btn-primary btn-login  ">
             Login
           </button>
         </form>

@@ -10,11 +10,11 @@ function NotesItem(props) {
   const { showAlert } = props;
   return (
     <>
-      <div className="col-lg-4 card-main col-md-6 col-sm-12 col-xl-  ">
-        <div className="card my-2 card-item  ">
+      <div className=" col col-lg-4 col-xl-4 col-xxl-4 card-main col-md-6 col-sm-12   ">
+        <div className="card my-2 card-item ">
           <div className="card-body  ">
             <div className="d-flex justify-content-between align-items-center">
-              <h5 className="card-title title">{note.title}</h5>
+              <h5 className="card-title title ">{note.title}</h5>
               <i
                 className="fa-sharp fa-solid fa-pen  icon"
                 onClick={() => update(note)}

@@ -1,14 +1,57 @@
 
-/* For Mobile Landscape View */
+ .card-main{
+    width: 20vw;
+    margin:2rem 3rem 0rem 2rem;
+    padding-right: 1rem;
+    margin-bottom: -1.2rem;
+    transform: translateX(5rem);
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    width: 10vw;
+    text-align: start;
+    /* border: 1px solid red; */
 
-@media screen and (max-device-width: 540px)
-and (orientation: landscape) {
+}
+.btn{
+    margin-right: 1rem;
+}
+i{
+    cursor: pointer;
+    margin: 1rem;
+    margin-top: -.7rem;
+}
+i:hover{
+    color:#766594
+}
+.card-body .title{
+    width: 13vw;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+.desc{
+    line-height: 1rem;
+}
+.card-item{
+    background-color: #FEF7FF;
+    width: 20vw;
+}
+
+
+@media  (max-device-width: 700px) {
+
+    .card-main{
+        width: 30vw;
+        margin:2rem 3rem 0rem 3rem;
+        padding-right: 1rem;
+        margin-bottom: -1.2rem;
+        transform: translateX(5rem);
+    }
     .card{
         box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-        width: 15vw;
+        width: 10vw;
         text-align: start;
-        margin: 0rem 2rem 0rem 2rem;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     
     }
     .btn{
@@ -16,21 +59,66 @@ and (orientation: landscape) {
     }
     i{
         cursor: pointer;
-        margin: .5rem;
+        margin: .4rem;
     }
     i:hover{
         color:#766594
     }
-    .card-title{
-        width: 20vw;
+    .card-body .title{
         border: 1px solid red;
-        font-size: .9rem;
+        width: 19vw;
+        font-size: 1.1rem;
+    }
+    .desc{
+        line-height: 1rem;
     }
     .card-item{
-        display: flex;
-        justify-content: space-between;
         background-color: #FEF7FF;
-        margin-right: 5rem;
+        width: 35vw;
+    }
+}
+
+@media  (min-width: 701px) {
+
+    .card-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30vw;
+        /* margin-right:rem ; */
+        /* border: 1px solid red; */
+        padding-right: 1rem;
+        margin-bottom: -1.2rem;
+        transform: translateX( 1rem);
+    }
+    .card{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        width: 10vw;
+        text-align: start;
+        /* border: 1px solid red; */
+    
+    }
+    .btn{
+        margin-right: 1rem;
+    }
+    i{
+        cursor: pointer;
+        margin: .4rem;
+    }
+    i:hover{
+        color:#766594
+    }
+    .card-body .title{
+        /* border: 1px solid red; */
+        width: 19vw;
+        font-size: 1.3rem;
+    }
+    .desc{
+        line-height: 1rem;
+    }
+    .card-item{
+        background-color: #FEF7FF;
+        width: 35vw;
     }
 }
 

@@ -2,16 +2,21 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import noteContext from "../../Context/Notes/NoteContext";
 import NotesItem from "./NotesItem";
 import "./Notes.css";
+import { useNavigate } from "react-router-dom";
 
 function Notes(props) {
   const { showAlert } = props;
   const context = useContext(noteContext);
   const { notes, getNote, upadateNote } = context;
-
+  const navigate = useNavigate();
   // Getting all the notes by using useEffect
   useEffect(() => {
-    getNote();
-    // eslint-disable-next-line
+    if (localStorage.getItem("token")) {
+      getNote();
+    } else {
+      navigate("/login");
+      // eslint-disable-next-line
+    }
   }, []);
   const [note, setNote] = useState({
     id: "",
@@ -153,7 +158,7 @@ function Notes(props) {
           <h1>Your Note's</h1>
           <div className="container">
             {/* If there is empty note then show this */}
-            {notes.length === 0 && <p>No notes here to display </p>}
+            {notes.length === 0 && "No notes here to display"}
           </div>
           {notes.map((note) => {
             return (
