@@ -36,7 +36,7 @@ function Signup(props) {
           <form onSubmit={handleSubmit}>
             <h3 className="sign-h">signup form</h3>
             <div className="mb-3">
-              <label htmlFor="name" className="form-label">
+              <label htmlFor="name" className="form-label sign-label">
                 Name
               </label>
               <input
@@ -51,7 +51,7 @@ function Signup(props) {
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="email" className="form-label">
+              <label htmlFor="email" className="form-label sign-label">
                 Email
               </label>
               <input
@@ -66,7 +66,7 @@ function Signup(props) {
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="password" className="form-label">
+              <label htmlFor="password" className="form-label sign-label">
                 Password
               </label>
               <input

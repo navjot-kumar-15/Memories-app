@@ -1,4 +1,8 @@
 
+.add-cont{
+    margin-top: 8rem;
+}
+
 @media screen and (max-device-width: 540px)
 and (orientation: landscape) {
 

@@ -19,7 +19,7 @@ export default function Login(props) {
       }),
     });
     const json = await response.json();
-    console.log(json);
+    // console.log(json);
     if (json.success) {
       // Save the auth token and redirect
       localStorage.setItem("token", json.jwtAuthToken);
@@ -32,7 +32,6 @@ export default function Login(props) {
 
   const onChange = (e) => {
     setCredentials({ ...Credentials, [e.target.name]: e.target.value });
-    // console.log(e);
   };
 
   return (
@@ -52,7 +51,7 @@ export default function Login(props) {
           <div className="mb-3  text-start">
             <label
               htmlFor="exampleInputEmail1"
-              className="form-label text-start  email"
+              className="form-label text-start  email login-label"
             >
               Email address
             </label>
@@ -70,7 +69,7 @@ export default function Login(props) {
           <div className="mb-3 text-start">
             <label
               htmlFor="exampleInputPassword1"
-              className="form-label text-start "
+              className="form-label text-start pass login-label"
             >
               Password
             </label>

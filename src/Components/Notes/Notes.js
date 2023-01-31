@@ -40,7 +40,6 @@ function Notes(props) {
     e.preventDefault();
     upadateNote(note.id, note.etitle, note.edescription, note.etag);
     refClose.current.click();
-    console.log("You have clicked the update note ");
     // addNote(note.title, note.description, note.tag);
     props.showAlert("Updated Successfully ", "success");
   };
@@ -70,7 +69,7 @@ function Notes(props) {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title fs-2" id="exampleModalLabel">
+              <h5 className="modal-title-h " id="exampleModalLabel">
                 Edit Note
               </h5>
               <button
@@ -85,12 +84,12 @@ function Notes(props) {
 
               <div className="text-start container  ">
                 <div className="mb-3">
-                  <label htmlFor="title" className="form-label title">
+                  <label htmlFor="title" className="form-label modal-title">
                     Title
                   </label>
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control modal-input"
                     id="etitle"
                     name="etitle"
                     aria-describedby="emailHelp"
@@ -101,12 +100,15 @@ function Notes(props) {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="description" className="form-label">
+                  <label
+                    htmlFor="description"
+                    className="form-label modal-title"
+                  >
                     Description
                   </label>
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control modal-input"
                     id="edescription"
                     name="edescription"
                     value={note.edescription}
@@ -116,12 +118,12 @@ function Notes(props) {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="tag" className="form-label">
+                  <label htmlFor="tag" className="form-label modal-title">
                     Tag
                   </label>
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control modal-input"
                     id="etag"
                     name="etag"
                     value={note.etag}
@@ -136,7 +138,7 @@ function Notes(props) {
               <button
                 ref={refClose}
                 type="button"
-                className="btn btn-secondary"
+                className="btn btn-secondary modal-btn"
                 data-bs-dismiss="modal"
               >
                 Close
@@ -145,7 +147,7 @@ function Notes(props) {
                 disabled={note.etitle.length < 5 || note.edescription < 5}
                 onClick={handleClick}
                 type="button"
-                className="btn btn-primary"
+                className="btn btn-primary modal-btn"
               >
                 Update Note
               </button>

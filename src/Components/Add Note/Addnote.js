@@ -24,7 +24,7 @@ function Addnote(props) {
   };
   return (
     <>
-      <div className="container main text-start  my-5 ">
+      <div className="container main text-start  add-cont ">
         <h2 className="mx-3">Add a Note </h2>
         <div className="row row-sm-12">
           <div className="col col-sm-12 col-xm-12  ">

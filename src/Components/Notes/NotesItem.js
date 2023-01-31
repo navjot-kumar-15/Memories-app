@@ -17,7 +17,10 @@ function NotesItem(props) {
               <h5 className="card-title title ">{note.title}</h5>
               <i
                 className="fa-sharp fa-solid fa-pen  icon"
-                onClick={() => update(note)}
+                onClick={() => {
+                  update(note);
+                  props.showAlert("Updated Successfully", "success");
+                }}
               ></i>
               <i
                 className="fa-sharp fa-solid fa-trash  icon"
@@ -27,7 +30,7 @@ function NotesItem(props) {
                 }}
               ></i>
             </div>
-            <p className="card-text desc text-start">{note.description}</p>
+            <p className="card-text desc text-start ">{note.description}</p>
             <p className="card-text tag text-start">{note.tag}</p>
           </div>
         </div>
